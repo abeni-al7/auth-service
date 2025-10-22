@@ -27,11 +27,13 @@ POST /auth/login" --> AuthService
 PUT /users/:id (with JWT)" --> UserService
         AuthService -- "Manages user credentials" --> AuthDB[(Auth DB)]
         UserService -- "Manages user profiles" --> UserDB[(User DB)]
-    end
+        end
 
-    style Client fill:#f9f,stroke:#333,stroke-width:2px
-    style AuthService fill:#ccf,stroke:#333,stroke-width:2px
-    style UserService fill:#ccf,stroke:#333,stroke-width:2px
+        style Client fill:#f0f8ff,stroke:#0366d6,stroke-width:2px
+        style AuthService fill:#f0f8ff,stroke:#0366d6,stroke-width:2px
+        style UserService fill:#f0f8ff,stroke:#0366d6,stroke-width:2px
+        style AuthDB fill:#ffffff,stroke:#333333,stroke-width:1px
+        style UserDB fill:#ffffff,stroke:#333333,stroke-width:1px
 ```
 
 **Design Decision:** The **User Service** validates JWTs locally by verifying the signature, avoiding a round-trip to the **Auth Service**. This approach is faster and keeps the services independent.
