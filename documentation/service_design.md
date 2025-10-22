@@ -14,9 +14,9 @@ This service is the single source of truth for user authentication.
 
 ## 2. Tech Stack
 
--   **Language:** Node.js with Express.
+-   **Language:** Python with FastAPI.
 -   **Database:** PostgreSQL (in a dedicated database).
--   **JWT Library:** `jsonwebtoken` (for Node.js).
+-   **JWT Library:** `python-jose` or `PyJWT`.
 -   **Password Hashing:** **bcrypt** or **Argon2**. Argon2 is preferred for production environments.
 -   **Containerization:** Docker, using multi-stage builds for smaller images.
 
