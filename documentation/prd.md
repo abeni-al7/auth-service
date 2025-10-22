@@ -6,7 +6,7 @@ The primary goal of this project is to build the smallest possible microservice-
 
 ## 2. Scope
 
-You will build two separate services, each in its own repository:
+We will build two separate services, each in its own repository:
 
 -   **Service 1: Auth Service**
     -   Handles user registration.
@@ -94,10 +94,10 @@ sequenceDiagram
 
 You can swap alternatives later, but starting with a simple stack is recommended.
 
--   **Language:** Node.js (Express/Fastify), Python (Flask), or Java (Spring Boot).
--   **Database:** PostgreSQL, MySQL, or MongoDB (a separate database for each service).
+-   **Language:** Python (FastAPI).
+-   **Database:** PostgreSQL.
 -   **Auth:** JWT (using the HS256 algorithm).
--   **Containerization:** Docker (optional but strongly recommended).
+-   **Containerization:** Docker.
 
 ## 6. Security Requirements
 
@@ -112,11 +112,11 @@ Phase 1 should support local development only, but with future scaling in mind.
 
 -   **/auth-service**
     -   `src/`
-    -   `package.json`
+    -   `requirements.txt`
     -   `Dockerfile`
 -   **/user-service**
     -   `src/`
-    -   `package.json`
+    -   `requirements.txt`
     -   `Dockerfile`
 
 An optional `docker-compose.yml` can be added to run both services together.
