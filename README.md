@@ -22,3 +22,15 @@ The configuration is loaded with the following precedence:
 | `JWT_SECRET`         | A strong, secret key used for signing JWTs. It must be at least 32 characters long.                        | -             |
 | `JWT_EXPIRY_SECONDS` | The duration in seconds for which a JWT will be valid.                                                   | `3000`          |
 | `ENVIRONMENT`        | Determines which `.env` file to load (e.g., `dev` loads `.env.dev`).                                       | `dev`           |
+
+## Running Tests
+
+To run the automated tests for this service, you can use Python's built-in `unittest` module.
+
+From the root directory of the project, run the following command:
+
+```bash
+python -m unittest discover tests
+```
+
+This command will automatically discover and run all tests within the `tests` directory.
