@@ -14,7 +14,7 @@ class Settings(BaseSettings):
     PORT: int = Field(ge=1, le=65535)
     DEBUG: bool = False
     DATABASE_URI: str
-    JWT_SECRET_KEY: str = Field(min_length=32)
+    JWT_SECRET: str = Field(min_length=32)
     JWT_EXPIRY_SECONDS: int = Field(gt=0)
 
     model_config = SettingsConfigDict(
