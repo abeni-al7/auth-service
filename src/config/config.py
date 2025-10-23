@@ -1,9 +1,15 @@
 import os
+from functools import lru_cache
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    ENVIRONMENT: str = "dev"
+    """Manages application configuration settings.
+
+    Loads settings from environment variables and an environment-specific
+    .env file
+    (e.g., .env.dev) determined by the `ENVIRONMENT` variable.
+    """
     APP_NAME: str = "Auth service"
     PORT: int
     DEBUG: bool = False
@@ -20,5 +26,9 @@ class Settings(BaseSettings):
 settings = Settings()
 
 
-def get_settings():
+@lru_cache
+def get_settings() -> Settings:
+    """
+    Return a cached instance of the application settings.
+    """
     return settings
