@@ -33,7 +33,7 @@ class TestEnvironmentConfig(unittest.TestCase):
             "PORT": "8080",
             "DEBUG": "True",
             "DATABASE_URI": "postgresql://test:test@localhost:5432/testdb",
-            "JWT_SECRET_KEY": "a" * 32,
+            "JWT_SECRET": "a" * 32,
             "JWT_EXPIRY_SECONDS": "60",
             "ENVIRONMENT": "test",
         }
