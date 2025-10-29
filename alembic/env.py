@@ -2,6 +2,7 @@ from logging.config import fileConfig
 
 from alembic import context
 from src.config.database import Base, engine
+from src.models.user import User  # noqa: F401
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
