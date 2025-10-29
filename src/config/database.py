@@ -6,7 +6,7 @@ from src.config.config import get_settings
 
 engine = create_engine(get_settings().DATABASE_URI, pool_pre_ping=True)
 
-SessionLocal = sessionmaker(bind=engine, autoflush=True, autocommit=False)
+SessionLocal = sessionmaker(bind=engine, autocommit=False)
 
 Base = declarative_base()
 
